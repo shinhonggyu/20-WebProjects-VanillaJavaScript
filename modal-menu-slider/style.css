@@ -18,7 +18,7 @@ body {
 
 body.show-nav {
   /* Width of nav */
-  transform: translate(200px);
+  transform: translateX(200px);
 }
 
 nav {

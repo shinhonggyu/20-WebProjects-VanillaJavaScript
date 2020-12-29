@@ -1,0 +1,17 @@
+.tab-btn {
+  width: 200px;
+  height: 150px;
+  margin-bottom: 10px;
+  background-color: pink;
+  text-align: center;
+  color: rgb(80, 80, 80);
+}
+
+.tab-txt {
+  margin: 0px;
+}
+
+span {
+  display: block;
+  padding: 0px;
+}

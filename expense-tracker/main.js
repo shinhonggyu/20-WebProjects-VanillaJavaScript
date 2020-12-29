@@ -1,10 +1,10 @@
-const balance = document.querySelector("#balance");
-const money_plus = document.querySelector("#money-plus");
-const money_minus = document.querySelector("#money-minus");
-const list = document.querySelector("#list");
-const form = document.querySelector("#form");
-const text = document.querySelector("#text");
-const amount = document.querySelector("#amount");
+const balance = document.querySelector('#balance');
+const money_plus = document.querySelector('#money-plus');
+const money_minus = document.querySelector('#money-minus');
+const list = document.querySelector('#list');
+const form = document.querySelector('#form');
+const text = document.querySelector('#text');
+const amount = document.querySelector('#amount');
 
 // const dummyTransactions = [
 //   { id: 1, text: "Flower", amount: -20 },
@@ -14,18 +14,18 @@ const amount = document.querySelector("#amount");
 // ];
 
 const localStorageTransactions = JSON.parse(
-  localStorage.getItem("transactions")
+  localStorage.getItem('transactions')
 );
 
 let transactions =
-  localStorage.getItem("transactions") !== null ? localStorageTransactions : [];
+  localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
 
 // Add transaction
 function addTransaction(e) {
   e.preventDefault();
 
-  if (text.value.trim() === "" || amount.value.trim() === "") {
-    alert("Please add a text and amount");
+  if (text.value.trim() === '' || amount.value.trim() === '') {
+    alert('Please add a text and amount');
   } else {
     const transaction = {
       id: generateID(),
@@ -41,8 +41,8 @@ function addTransaction(e) {
 
     updateLocalStorage();
 
-    text.value = "";
-    amount.value = "";
+    text.value = '';
+    amount.value = '';
   }
 }
 
@@ -54,12 +54,12 @@ function generateID() {
 // Add transactions to DOM list
 function addTransactionDOM(transaction) {
   // Get sign
-  const sign = transaction.amount < 0 ? "-" : "+";
+  const sign = transaction.amount < 0 ? '-' : '+';
 
-  const item = document.createElement("li");
+  const item = document.createElement('li');
 
   // Add class based on value
-  item.classList.add(transaction.amount < 0 ? "minus" : "plus");
+  item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
 
   item.innerHTML = `
         ${transaction.text} <span>${sign}${Math.abs(
@@ -76,7 +76,7 @@ function addTransactionDOM(transaction) {
 function updateValues() {
   const amounts = transactions.map((transaction) => transaction.amount);
 
-  const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+  const total = amounts.reduce((acc, item) => acc + item, 0).toFixed(2);
 
   const income = amounts
     .filter((item) => item > 0)
@@ -104,12 +104,12 @@ function removeTransaction(id) {
 
 // Update local storage transactions
 function updateLocalStorage() {
-  localStorage.setItem("transactions", JSON.stringify(transactions));
+  localStorage.setItem('transactions', JSON.stringify(transactions));
 }
 
 // Init app
 function init() {
-  list.innerHTML = "";
+  list.innerHTML = '';
 
   transactions.forEach(addTransactionDOM);
   updateValues();
@@ -117,4 +117,4 @@ function init() {
 
 init();
 
-form.addEventListener("submit", addTransaction);
+form.addEventListener('submit', addTransaction);

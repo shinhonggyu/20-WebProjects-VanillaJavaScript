@@ -6,14 +6,15 @@ button {
 
 body {
   text-align: center;
+  background-color: black;
 }
 
 .game {
   display: flex;
   flex-direction: column;
-  background: url(img/background.png) center/cover;
   width: 800px;
   height: 500px;
+  background: url(img/background.png) center/cover;
   margin: auto;
   border-radius: 20px;
 }
@@ -39,32 +40,38 @@ body {
 }
 
 .game__timer {
+  background-color: #fff;
   width: 100px;
-  background-color: white;
   text-align: center;
   border: 5px solid black;
   font-size: 32px;
   margin-top: 8px;
   border-radius: 20px;
+  visibility: hidden;
+  user-select: none;
+  cursor: auto;
 }
 
 .game__score {
+  font-size: 38px;
+  background-color: darksalmon;
+  color: #fff;
   width: 50px;
   height: 50px;
-  background-color: darksalmon;
+  text-align: center;
   border-radius: 50%;
   margin-top: 8px;
-  text-align: center;
-  font-size: 46px;
-  color: white;
-  border: 3px solid black;
   line-height: 50px;
+  border: 3px solid black;
+  visibility: hidden;
+  user-select: none;
+  cursor: auto;
 }
 
 .game__field {
+  margin-top: 40px;
   width: 100%;
   height: 100%;
-  margin-top: 40px;
   position: relative;
 }
 
@@ -75,7 +82,7 @@ body {
   padding: 20px;
   background-color: #00000090;
   border-radius: 20px;
-  color: white;
+  color: #fff;
   text-align: center;
   margin: auto;
   transform: translateY(-150%);
@@ -97,4 +104,14 @@ body {
 .pop-up__message {
   display: block;
   font-size: 38px;
+}
+
+.carrot,
+.bug {
+  transition: transform 100ms ease-in;
+}
+
+.carrot:hover,
+.bug:hover {
+  transform: scale(1.1);
 }

@@ -20,3 +20,58 @@ _semantic 요소_
 form, table, img 등이 있으며 이들 태그는 content의 의미를 명확히 설명한다,
 
 <img src="https://poiemaweb.com/img/building-structure.png" width="400" style="background: white">
+
+---
+
+#### 텍스트 관련 태그
+
+1. 제목 (Headings) 태그  
+   시맨틱 웹의 의미를 살려서 제목 이외에는 사용하지 않는 것이 좋다. 검색엔진은 제목 태그를 중요한 의미로 받아들일 가능성이 크다.
+
+2. 글자 형태 (Text Formatting) 태그  
+   2.1 b: bold체. 제목 태그와 같이 의미론적(Semantic) 중요성의 의미는 없다  
+   2.2 strong: b tag와 동일하게 bold체를 지정한다. 하지만 의미론적(Semantic) 중요성의 의미를 갖는다.  
+   2.3 i: Italic체를 지정한다. 의미론적(Semantic) 중요성의 의미는 없다.  
+   2.4 em: emphasized(강조, 중요한) text를 지정한다. i tag와 동일하게 Italic체로 표현된다. 의미론적(Semantic) 중요성의 의미를 갖는다.  
+   2.5 small: small text를 지정한다.  
+   2.6 mark: highlighted text를 지정한다.  
+   2.7 del: deleted (removed) text를 지정한다.  
+   2.8 ins: inserted (added) text를 지정한다.  
+   2.9 sub / sup: sub 태그는 subscripted(아래에 쓰인) text를 sup 태그는 superscripted(위에 쓰인) text를 지정한다.
+
+3. 본문 태그  
+   3.1 p: 단락 (Paragraphs)을 지정한다.  
+   3.2 br: br tag는 (강제)개행 (line break)을 지정한다. br tag는 빈 요소(empty element)로 종료태그가 없다.  
+   3.3 pre: 형식화된(preformatted) text를 지정한다. pre 태그 내의 content는 작성된 그대로 브라우저에 표시된다.  
+   3.4 hr: 수평줄을 삽입한다.
+
+#### HTML의 핵심 개념 Hyperlink
+
+한 텍스트에서 다른 텍스트로 건너뛰어 읽을 수 있는 이 기능을 하이퍼링크(hyper link)라 한다.  
+HTML link는 hyperlink를 의미하며 a(anchor) tag가 그 역할을 담당한다.
+
+target 어트리뷰트는 링크를 클릭했을 때 윈도우를 어떻게 오픈할 지를 지정한다.
+
+| Value   | Description                                                     |
+| ------- | --------------------------------------------------------------- |
+| \_self  | 링크를 클릭했을 때 연결문서를 현재 윈도우에서 오픈한다 (기본값) |
+| \_blank | 링크를 클릭했을 때 연결문서를 새로운 윈도우나 탭에서 오픈한다   |
+
+#### 목록(List)와 표(Table) 형식 표현을 위한 태그
+
+1. 목록 (List)  
+   1.1 순서없는 목록 (Unordered List)  
+   1.2 순서있는 목록 (Ordered List)
+
+2. 테이블  
+   표(table)를 만들 때 사용하는 태그이다.  
+   과거에는 테이블 태그를 사용하여 레이아웃을 구성하기도 하였으나 모던 웹에서는 주로 공간 분할 태그인 div 태그를 사용하여 레이아웃을 구성한다.
+
+| tag   | Description                       |
+| ----- | --------------------------------- |
+| table | 표를 감싸는 태그                  |
+| tr    | 표 내부의 행 (table row)          |
+| th    | 행 내부의 제목 셀 (table heading) |
+| td    | 행 내부의 일반 셀 (table data)    |
+
+<img src="https://poiemaweb.com/img/html_table_structure.gif" width=400>

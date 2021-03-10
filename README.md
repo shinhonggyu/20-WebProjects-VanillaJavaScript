@@ -156,6 +156,8 @@ form 태그 내에 존재하여야 입력 데이터를 전송할 수 있으나 a
 
 <font color="pink">서버에 전송되는 데이터는 name 어트리뷰트를 키로, value 어트리뷰트를 값으로하여 key=value의 형태로 전송된다.</font>
 
+<span style="color:red">붉은 색</span>
+
 | type 어트리뷰트값 | Description                    |
 | ----------------- | ------------------------------ |
 | button            | 버튼 생성                      |
